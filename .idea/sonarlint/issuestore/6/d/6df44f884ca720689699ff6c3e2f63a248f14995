@@ -1,0 +1,97 @@
+
+D
+java:S10660"/Merge this if statement with the enclosing one.(‹‡ÍE
+C
+java:S1604v"(Make this anonymous inner class a lambda(¾Šé—ÿÿÿÿÿ
+D
+java:S1604Œ"(Make this anonymous inner class a lambda(Ÿ¯Ôşşÿÿÿÿ
+D
+java:S1604”"(Make this anonymous inner class a lambda(“…çşÿÿÿÿ
+?
+java:S1604´"(Make this anonymous inner class a lambda(ùîĞ 
+?
+java:S1604»"(Make this anonymous inner class a lambda(¼û—
+D
+java:S1604¬"(Make this anonymous inner class a lambda(„±ÓÎùÿÿÿÿ
+D
+java:S1604•"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ
+r
+java:S1450Ÿ"VRemove the "jBNuevo" field and declare it as a local variable in the relevant methods.(—ûÆÄøÿÿÿÿ
+n
+java:S1450 "XRemove the "jBRefresh" field and declare it as a local variable in the relevant methods.(æçÚt
+r
+java:S1450¡"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ
+s
+java:S1450¢"WRemove the "jLabel10" field and declare it as a local variable in the relevant methods.(¼õò†şÿÿÿÿ
+r
+java:S1450£"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ
+r
+java:S1450¤"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ
+m
+java:S1450¥"VRemove the "jLabel4" field and declare it as a local variable in the relevant methods.(«¢•ã
+m
+java:S1450¦"VRemove the "jLabel5" field and declare it as a local variable in the relevant methods.(ó Ù®
+r
+java:S1450§"VRemove the "jLabel6" field and declare it as a local variable in the relevant methods.(¸ôÂøÿÿÿÿ
+m
+java:S1450¨"VRemove the "jLabel7" field and declare it as a local variable in the relevant methods.(×ê˜Ÿ
+m
+java:S1450©"VRemove the "jLabel8" field and declare it as a local variable in the relevant methods.(å»«¢
+r
+java:S1450ª"VRemove the "jLabel9" field and declare it as a local variable in the relevant methods.(Ì’óĞşÿÿÿÿ
+l
+java:S1450«"URemove the "jMenu2" field and declare it as a local variable in the relevant methods.(€˜ÇÛ
+t
+java:S1450¬"XRemove the "jMenuBar1" field and declare it as a local variable in the relevant methods.(úıÁ›ÿÿÿÿÿ
+o
+java:S1450­"YRemove the "jMenuItem1" field and declare it as a local variable in the relevant methods.(Éíå4
+r
+java:S1450®"VRemove the "jPanel1" field and declare it as a local variable in the relevant methods.(´œ½ÿÿÿÿÿ
+w
+java:S1450¯"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ
+q
+java:S1450"VRemove the "usuario" field and declare it as a local variable in the relevant methods.(ÂÌ±Ñûÿÿÿÿ
+Q
+java:S1161›":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161¬":Add the "@Override" annotation above this method signature(†ŒË³
+A
+java:S1172Å"*Remove this unused method parameter "evt".(œá‘Ë
+N
+java:S1135Æ"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+@
+java:S1172Ê"*Remove this unused method parameter "evt".(¾€öJ
+N
+java:S1135Ë"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+F
+java:S1172Ğ"*Remove this unused method parameter "evt".(…´º¸ıÿÿÿÿ
+N
+java:S1135Ñ"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+A
+java:S1172×"*Remove this unused method parameter "evt".(Âõ°
+N
+java:S1135Ø"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+F
+java:S1172Ş"*Remove this unused method parameter "evt".(å¤—ïúÿÿÿÿ
+N
+java:S1135ß"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+F
+java:S1172è"*Remove this unused method parameter "evt".(¡ú´½şÿÿÿÿ
+N
+java:S1135é"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+A
+java:S1172í"*Remove this unused method parameter "evt".(ÆÀÁ
+N
+java:S1135î"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+F
+java:S1172õ"*Remove this unused method parameter "evt".(¯ıüÿÿÿÿ
+N
+java:S1135ö"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+F
+java:S1197ü"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
+\
+java:S2147‹"ECombine this catch with the one at line 393, which has the same body.(¨¦Š½
+\
+java:S2147"ECombine this catch with the one at line 393, which has the same body.(ã€ 
+[
+java:S2147"ECombine this catch with the one at line 393, which has the same body.(ñÎ¯%

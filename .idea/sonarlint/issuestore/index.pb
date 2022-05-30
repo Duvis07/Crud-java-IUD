@@ -1,0 +1,19 @@
+
+P
+ src/controlador/Controlador.java,a\a\aa912b0df3b48b59511e9e8e6825bbfb8938fbb3
+G
+src/modelo/Gestion.java,5\4\540d827a17165a1b757f641bd0a3e80de0946f51
+H
+src/modelo/IGestion.java,9\7\9731538a9866a9cd57bbd44acd060f31a67de630
+F
+src/utils/Mensaje.java,9\e\9e0a194d7db28ba911fa856af6a2250ca6725b80
+G
+src/modelo/Usuario.java,9\5\9523077ccdd51b218b48c5eb287cee457b2f9e98
+>
+src/sql/bd.sql,5\9\598872dbcd708a42c0471dc47487fac2575bf83b
+H
+src/modelo/Conexion.java,5\6\56e726af352edafd97df653c74607f11844142f1
+H
+src/vista/Principal.java,6\d\6df44f884ca720689699ff6c3e2f63a248f14995
+H
+src/vista/Principal.form,b\4\b4c9e3996b1fe586b285ddd81159e2509277b006
