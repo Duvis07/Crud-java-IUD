@@ -7,6 +7,7 @@ se hace con la ayuda de mysql.
 ![image](https://user-images.githubusercontent.com/96325513/171032846-248e8421-ace2-4025-9c06-b3d306458579.png)
 
 ## Base de datos Mysql
-![image](https://user-images.githubusercontent.com/96325513/171033094-8b4b823f-8abf-4cae-9c51-bff43c7431e5.png)
+![image](https://user-images.githubusercontent.com/96325513/171033256-b67fe33c-745d-46dd-9319-aa3c424f32a4.png)
+
 
 Autor: Duvan Arley Botero Rivillas
