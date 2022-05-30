@@ -6,10 +6,9 @@ se hace con la ayuda de mysql.
 ## Evidencia de trabajo
 ![image](https://user-images.githubusercontent.com/96325513/171033581-0b659a9d-58e2-4c6f-81c3-a16bf6007489.png)
 
-![image](https://user-images.githubusercontent.com/96325513/171032846-248e8421-ace2-4025-9c06-b3d306458579.png)
+![image](https://user-images.githubusercontent.com/96325513/171050243-25da218a-1c94-4c6d-8153-8d50442ebf96.png)
 
 ## Base de datos Mysql
-![image](https://user-images.githubusercontent.com/96325513/171033256-b67fe33c-745d-46dd-9319-aa3c424f32a4.png)
-
+![image](https://user-images.githubusercontent.com/96325513/171050137-a4381557-3985-41ce-916e-3f8ff57f3b57.png)
 
 Autor: Duvan Arley Botero Rivillas
