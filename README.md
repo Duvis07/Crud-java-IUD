@@ -9,6 +9,4 @@ se hace con la ayuda de mysql.
 ## Base de datos Mysql
 ![image](https://user-images.githubusercontent.com/96325513/171033094-8b4b823f-8abf-4cae-9c51-bff43c7431e5.png)
 
-
-
 Autor: Duvan Arley Botero Rivillas
