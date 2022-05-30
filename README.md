@@ -4,6 +4,8 @@ Se crea proyecto swing en java para un crud de la tabla clientes de la base de d
 se hace con la ayuda de mysql.
 
 ## Evidencia de trabajo
+![image](https://user-images.githubusercontent.com/96325513/171033481-7c7be163-3521-46e6-8e02-995b2a958f7f.png)
+
 ![image](https://user-images.githubusercontent.com/96325513/171032846-248e8421-ace2-4025-9c06-b3d306458579.png)
 
 ## Base de datos Mysql
