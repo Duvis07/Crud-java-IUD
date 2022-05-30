@@ -9,6 +9,6 @@ se hace con la ayuda de mysql.
 ![image](https://user-images.githubusercontent.com/96325513/171050243-25da218a-1c94-4c6d-8153-8d50442ebf96.png)
 
 ## Base de datos Mysql
-![image](https://user-images.githubusercontent.com/96325513/171050295-d3834913-db87-45b6-a52e-b73f4fd09d07.png)
+![image](https://user-images.githubusercontent.com/96325513/171050369-698acd36-5a0d-4e08-b564-f156056d3c94.png)
 
 Autor: Duvan Arley Botero Rivillas
