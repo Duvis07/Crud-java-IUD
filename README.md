@@ -5,12 +5,12 @@ se hace con la ayuda de mysql.
 
 
 ## Evidencia de trabajo
-![image](https://user-images.githubusercontent.com/96325513/171032051-ee840aed-d4aa-4675-b034-e60824343bf7.png)
+![image](https://user-images.githubusercontent.com/96325513/171032846-248e8421-ace2-4025-9c06-b3d306458579.png)
 
 ![image](https://user-images.githubusercontent.com/96325513/171032120-a889761d-a583-4bf9-a460-951ea7d604ad.png)
 
 ## Base de datos Mysql
-![image](https://user-images.githubusercontent.com/96325513/171032204-e33b346b-54dc-4b80-8ea8-d9c880bdc192.png)
+![image](https://user-images.githubusercontent.com/96325513/171032902-0860c11f-b5da-4c94-9e68-9bd3e70cb195.png)
 
 
 Autor: Duvan Arley Botero Rivillas
