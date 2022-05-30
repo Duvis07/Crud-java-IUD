@@ -10,6 +10,7 @@ public class Principal extends javax.swing.JFrame {
 
     private Controlador ctrl;
     private Cliente usuario;
+
     /**
      * Creates new form Principal
      */
@@ -19,57 +20,74 @@ public class Principal extends javax.swing.JFrame {
         consultar();
     }
 
-    private void consultar(){
+    private void consultar() {
         jTblInfo.setModel(ctrl.listar());
     }
-    private void limpiarCampos(){
+
+    private void limpiarCampos() {
         jTNombre.setText("");
         jTelefono.setText("");
         jTDireccion.setText("");
         jTNumeroDoc.setText("");
     }
-    
-    private void switchHabilitar(boolean flag){
+
+    private void switchHabilitar(boolean flag) {
         jBGuardar.setEnabled(flag);
         jTNombre.setEditable(flag);
         jTelefono.setEditable(flag);
         jTDireccion.setEditable(flag);
         jTNumeroDoc.setEditable(flag);
     }
-    
-    private void habilitarEliminar(boolean flag){
+
+    private void habilitarEliminar(boolean flag) {
         jBEliminar.setEnabled(flag);
     }
-    
-    private boolean guardar(){
-        JTextField [] campos = {jTNombre, jTelefono, jTNumeroDoc, jTDireccion};
+
+    private void habilitarEditar(boolean flag) {
+        jBEditar.setEnabled(flag);
+    }
+
+    private boolean guardar() {
+        JTextField[] campos = {jTNombre, jTelefono, jTNumeroDoc, jTDireccion};
         boolean sonVacios = Validador.estanVacios(campos);
-        if(!sonVacios){
-             String doc = jTNumeroDoc.getText().trim();
-               String direccion = jTDireccion.getText().trim();
-                String nombre = jTNombre.getText().trim();
-                String telefono = jTelefono.getText().trim();
-                usuario = new Cliente(doc,direccion, nombre,telefono);
-                int resultado = ctrl.agregar(usuario);
-                if(resultado > 0){
-                    Mensaje.mensajeInfo("Guardado", "Cliente agregado");
-                    return true;
-                }
+        if (!sonVacios) {
+            String doc = jTNumeroDoc.getText().trim();
+            String direccion = jTDireccion.getText().trim();
+            String nombre = jTNombre.getText().trim();
+            String telefono = jTelefono.getText().trim();
+            usuario = new Cliente(doc, direccion, nombre, telefono);
+            int resultado = ctrl.agregar(usuario);
+            if (resultado > 0) {
+                Mensaje.mensajeInfo("Guardado", "Cliente agregado");
+                return true;
             }
-       
+        }
+
         return false;
     }
-    
-    private void eliminar(){
+
+    private void eliminar() {
         boolean confirmado = Mensaje.mensajeConfirm("Eliminar", "¿Quieres eliminarlo?");
-        if(confirmado){
-            String documento = (String)jTblInfo.getValueAt(jTblInfo.getSelectedRow(), 0);
+        if (confirmado) {
+            String documento = (String) jTblInfo.getValueAt(jTblInfo.getSelectedRow(), 0);
             boolean esEliminado = ctrl.eliminar(documento.trim());
-            if(esEliminado){
+            if (esEliminado) {
                 consultar();
             }
         }
     }
+
+    private void editar() {
+        boolean confirmado = Mensaje.mensajeConfirm("Editar", "¿Quieres editar un cliente?");
+        if (confirmado) {
+            String documento = (String) jTblInfo.getValueAt(jTblInfo.getSelectedRow(), 0);
+            boolean esEliminado = ctrl.eliminar(documento.trim());
+            if (esEliminado) {
+                switchHabilitar(true);
+            }
+        }
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -88,7 +106,6 @@ public class Principal extends javax.swing.JFrame {
         jTNombre = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jTelefono = new javax.swing.JTextField();
-        jBNuevo = new javax.swing.JButton();
         jBGuardar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTblInfo = new javax.swing.JTable();
@@ -100,6 +117,8 @@ public class Principal extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jBNuevo1 = new javax.swing.JButton();
+        jBEditar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -140,14 +159,6 @@ public class Principal extends javax.swing.JFrame {
         jTelefono.setEditable(false);
         jTelefono.setName("Apellido"); // NOI18N
 
-        jBNuevo.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jBNuevo.setText("Nuevo");
-        jBNuevo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBNuevoActionPerformed(evt);
-            }
-        });
-
         jBGuardar.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jBGuardar.setText("Guardar");
         jBGuardar.setEnabled(false);
@@ -163,7 +174,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jTblInfo.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jTblInfo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTblInfo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -218,17 +229,29 @@ public class Principal extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 0, 0));
         jLabel10.setText("CLIENTES IUD");
 
+        jBNuevo1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jBNuevo1.setText("Nuevo");
+        jBNuevo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNuevo1ActionPerformed(evt);
+            }
+        });
+
+        jBEditar.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jBEditar.setText("Editar");
+        jBEditar.setEnabled(false);
+        jBEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEditarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jBEliminar)
-                        .addGap(48, 48, 48)
-                        .addComponent(jBRefresh))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,11 +278,19 @@ public class Principal extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jBNuevo)
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jBNuevo1)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jBGuardar))
                                     .addComponent(jTNumeroDoc)
-                                    .addComponent(jTelefono))))))
+                                    .addComponent(jTelefono)))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jBEliminar)
+                        .addGap(23, 23, 23)
+                        .addComponent(jBEditar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBRefresh)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
@@ -293,17 +324,18 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jLabel8))
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBNuevo1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(5, 5, 5)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jBRefresh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGap(22, 22, 22)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBEliminar)
+                    .addComponent(jBRefresh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jBEditar))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         jMenu2.setText("Archivo");
@@ -339,33 +371,30 @@ public class Principal extends javax.swing.JFrame {
         consultar();
     }//GEN-LAST:event_jBRefreshActionPerformed
 
-    private void jBNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoActionPerformed
-        // TODO add your handling code here:
-        limpiarCampos();
-        switchHabilitar(true);
-    }//GEN-LAST:event_jBNuevoActionPerformed
-
     private void jTblInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTblInfoMouseClicked
         // TODO add your handling code here:
-        if(jTblInfo.getSelectedRow() != -1){
-           habilitarEliminar(true); 
+        if (jTblInfo.getSelectedRow() != -1) {
+            habilitarEliminar(true);
+            habilitarEditar(true);
         }
     }//GEN-LAST:event_jTblInfoMouseClicked
 
     private void jScrollPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jScrollPane1MouseClicked
         // TODO add your handling code here:
-        if(jTblInfo.getSelectedRow() != -1){
-           habilitarEliminar(true); 
+        if (jTblInfo.getSelectedRow() != -1) {
+            habilitarEliminar(true);
+            habilitarEditar(true);
         }
     }//GEN-LAST:event_jScrollPane1MouseClicked
 
     private void jBGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarActionPerformed
         // TODO add your handling code here:
-        if(guardar()){
+        if (guardar()) {
             switchHabilitar(false);
             consultar();
             limpiarCampos();
             habilitarEliminar(false);
+            habilitarEditar(false);
         }
     }//GEN-LAST:event_jBGuardarActionPerformed
 
@@ -377,7 +406,7 @@ public class Principal extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         boolean salir = Mensaje.mensajeConfirm("Salida del Sistema", "¿Quieres Salir?");
-        if(salir){
+        if (salir) {
             dispose();
         }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
@@ -385,6 +414,15 @@ public class Principal extends javax.swing.JFrame {
     private void jTDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDireccionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTDireccionActionPerformed
+
+    private void jBNuevo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevo1ActionPerformed
+      
+    }//GEN-LAST:event_jBNuevo1ActionPerformed
+
+    private void jBEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEditarActionPerformed
+        // TODO add your handling code here:
+        editar();
+    }//GEN-LAST:event_jBEditarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -422,9 +460,10 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBEditar;
     private javax.swing.JButton jBEliminar;
     private javax.swing.JButton jBGuardar;
-    private javax.swing.JButton jBNuevo;
+    private javax.swing.JButton jBNuevo1;
     private javax.swing.JButton jBRefresh;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

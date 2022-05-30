@@ -72,4 +72,20 @@ public class Gestion implements IGestion{
         }
          return resultado;
     }    
+
+   @Override
+    public boolean editarPorDocumento(String documento) {
+     boolean resultado = false;
+         conn = new Conexion();
+         String sql = "UPDATE FROM usuarios WHERE documento=?";         
+        try {
+            pStm = conn.getCon().prepareStatement(sql);
+            pStm.setString(1, documento);
+            pStm.executeUpdate();
+            resultado = true;
+        } catch (SQLException ex) {
+            Mensaje.mensajeError("Error", ex.getMessage());
+        }
+         return resultado;
+    }
 }

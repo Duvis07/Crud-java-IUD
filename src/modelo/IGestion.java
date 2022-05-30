@@ -9,4 +9,6 @@ public interface IGestion {
     public int guardar(Cliente usuario);
     
     public boolean eliminarPorDocumento(String documento);
+    
+    public boolean editarPorDocumento(String documento);
 }
